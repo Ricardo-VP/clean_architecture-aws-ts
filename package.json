@@ -2,9 +2,8 @@
   "name": "clean_arch-aws-ts",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start-console-app": "nodemon --watch './**/*.ts' --exec 'ts-node' src/users/infrastructure/driving-adapters/console/console.ts"
   },
   "keywords": [],
   "author": "",
