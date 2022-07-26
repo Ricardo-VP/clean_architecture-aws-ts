@@ -2,7 +2,7 @@ import { User } from '../../domain/entities/User'
 import { UserGetterById } from '../../domain/services/UserGetterById'
 import { UserRepository } from '../../domain/repositories/UserRepository'
 
-export class UserUpdater {
+export class UserUpdaterUseCase {
   private readonly _userRepository: UserRepository
   private readonly _userGetterById: UserGetterById
 

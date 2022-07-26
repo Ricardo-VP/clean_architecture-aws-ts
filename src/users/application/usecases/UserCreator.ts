@@ -14,7 +14,7 @@ export class UserCreatorUseCase {
 
   async execute (body: User): Promise<User> {
     const existUser: boolean = await this._existUserByUserName.execute(
-      body.username
+      body.username as string
     )
 
     if (existUser) throw new UserAlreadyExistsException()
