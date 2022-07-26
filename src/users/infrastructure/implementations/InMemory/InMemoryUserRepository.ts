@@ -2,7 +2,7 @@ import { User } from 'users/domain/entities/User'
 import { UserRepository } from 'users/domain/repositories/UserRepository'
 
 export class InMemoryUserRepository implements UserRepository {
-  readonly userData: User[] = []
+  private readonly userData: User[] = []
 
   async getAll (): Promise<User[]> {
     return this.userData
