@@ -1,16 +1,16 @@
 import { UserCreatorUseCase } from '../../../application/usecases/UserCreator'
 import { User } from '../../../domain/entities/User'
-import { InMemoryUserRepository } from '../../../infrastructure/implementations/InMemory/InMemoryUserRepository'
+import { DynamoDBUserRepository } from '../../../infrastructure/implementations/Aws/dynamo-db/DynamoDBUserRepository'
 import { UserGetterUseCase } from '../../../application/usecases/UserGetter'
 import { UserUpdaterUseCase } from '../../../application/usecases/UserUpdater'
 import { UserDeleterUseCase } from '../../../application/usecases/UserDeleter'
 
 (async () => {
-  const inMemoryUserRepo = new InMemoryUserRepository()
-  const userGetterUseCase = new UserGetterUseCase(inMemoryUserRepo)
-  const userCreatorUseCase = new UserCreatorUseCase(inMemoryUserRepo)
-  const userUpdaterUseCase = new UserUpdaterUseCase(inMemoryUserRepo)
-  const userDeleterUseCase = new UserDeleterUseCase(inMemoryUserRepo)
+  const dynamoDBUserRepo = new DynamoDBUserRepository()
+  const userGetterUseCase = new UserGetterUseCase(dynamoDBUserRepo)
+  const userCreatorUseCase = new UserCreatorUseCase(dynamoDBUserRepo)
+  const userUpdaterUseCase = new UserUpdaterUseCase(dynamoDBUserRepo)
+  const userDeleterUseCase = new UserDeleterUseCase(dynamoDBUserRepo)
 
   // Creating users
   const userToCreate: User = {
