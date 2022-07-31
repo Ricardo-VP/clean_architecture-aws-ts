@@ -1,7 +1,7 @@
 import { ExistUserByUserName } from '../../domain/services/ExistUserByUserName'
-import { User } from 'users/domain/entities/User'
+import { User } from '../../domain/entities/User'
 import { UserAlreadyExistsException } from '../../domain/exceptions/UserAlreadyExistsException'
-import { UserRepository } from 'users/domain/repositories/UserRepository'
+import { UserRepository } from '../../domain/repositories/UserRepository'
 
 export class UserCreatorUseCase {
   private readonly _userRepository: UserRepository

@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start-console-app": "nodemon --watch './**/*.ts' --exec 'ts-node' src/users/infrastructure/driving-adapters/console/console.ts"
+    "start-console-app": "nodemon --watch './**/*.ts' --exec 'ts-node' src/users/infrastructure/driving-adapters/console/console.ts",
+    "start-rest-app": "nodemon src/shared/infrastructure/driving-adapters/api-rest/Run.ts"
   },
   "keywords": [],
   "author": "",
