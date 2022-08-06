@@ -1,5 +1,5 @@
 import { User } from '../../../../domain/entities/User'
-import { DynamoDB } from '../../../../../shared/infrastructure/driven-adapters/Aws/dynamo-db/index'
+import { DynamoDB } from '../../../../../../infrastructure/driven-adapters/Aws/dynamo-db/index'
 import { UserRepository } from '../../../../domain/repositories/UserRepository'
 
 export class DynamoDBUserRepository implements UserRepository {

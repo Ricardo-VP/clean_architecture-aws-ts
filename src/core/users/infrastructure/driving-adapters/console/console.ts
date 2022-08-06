@@ -1,6 +1,6 @@
 import { UserCreatorUseCase } from '../../../application/usecases/UserCreator'
 import { User } from '../../../domain/entities/User'
-import { DynamoDBUserRepository } from '../../../infrastructure/implementations/Aws/dynamo-db/DynamoDBUserRepository'
+import { DynamoDBUserRepository } from '../../implementations/Aws/dynamo-db/DynamoDBUserRepository'
 import { UserGetterUseCase } from '../../../application/usecases/UserGetter'
 import { UserUpdaterUseCase } from '../../../application/usecases/UserUpdater'
 import { UserDeleterUseCase } from '../../../application/usecases/UserDeleter'
