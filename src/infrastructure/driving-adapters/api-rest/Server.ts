@@ -1,5 +1,7 @@
 import express from 'express'
 import * as http from 'http'
+import morgan from 'morgan'
+
 import routes from './routes'
 
 export class Server {
@@ -11,6 +13,7 @@ export class Server {
     this._port = port
     this._app = express()
     this._app.use(express.json())
+    this._app.use(morgan('short'))
     this._app.use(express.urlencoded({ extended: false }))
     this._app.use(routes)
   }
